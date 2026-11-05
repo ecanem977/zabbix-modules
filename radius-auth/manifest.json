@@ -1,0 +1,24 @@
+{
+	"manifest_version": 1.0,
+	"id": "radius-auth",
+	"name": "RADIUS authentication",
+	"version": "1.0.0",
+	"namespace": "RadiusAuth",
+	"author": "hilde",
+	"description": "Checks local Zabbix users against a RADIUS server at login (PAP, Message-Authenticator, failover, MFA-aware) with optional local password fallback.",
+	"actions": {
+		"radius.settings.edit": {
+			"class": "RadiusSettingsEdit",
+			"view": "radius.settings.edit",
+			"layout": "layout.htmlpage"
+		},
+		"radius.settings.update": {
+			"class": "RadiusSettingsUpdate"
+		},
+		"radius.settings.test": {
+			"class": "RadiusSettingsTest",
+			"layout": "layout.json"
+		}
+	},
+	"config": {}
+}
